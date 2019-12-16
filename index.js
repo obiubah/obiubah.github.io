@@ -1,4 +1,4 @@
-const host = 'http://localhost:4000/users';
+const host = 'https://optisourceproject.azurewebsites.net/users/';
 async function logIn() {
     const emailAddress = document.getElementById('emailAddress').value;
     const password = document.getElementById('password').value;
