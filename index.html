@@ -1,100 +1,49 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)https://getbootstrap.com/docs/3.4/examples/cover/ -->
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/docs/3.4/favicon.ico">
-    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/cover/">
-
-    <title>Cover Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
     <script src="index.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-
-    <!-- Custom styles for this template -->
-    <link href="index.css" rel="stylesheet">
-
+    <title>OptiSource Sign Up</title>
 </head>
 
-<body>
-    <div class="site-wrapper">
-        <div class="site-wrapper-inner">
-            <div class="cover-container">
-                <div class="masthead clearfix">
-                    <div class="inner">
-                        <h3 class="masthead-brand">ReviewAnalyzr</h3>
-                    </div>
-                </div>
-                <div class="inner cover">
-                    <h1 class="cover-heading">Using sentiment analysis to predict <b>genuiness</b> of reviews.</h1>
-                    <p class="lead">Pick a model, input your text, and get a real time result!.</p>
-                    <br><br>
-                </div>
-                <form>
-                    <div class="form-group">
-                        <select required class="form-control" id="model">
-                            <option disabled selected value> -- Select a Model -- </option>
-                            <option>Multinomial Naive Bayes</option>
-                            <option>Support Vector Machine</option>
-                            <option>K-Nearest Neighbor</option>
-                            <option>Long Short Term Memory</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea required=true class="form-control" id="textArea" rows="3"
-                            placeholder="Enter review text..."></textarea>
-                    </div>
-                    <button type="button" onclick="callAPI();" class="btn btn-primary btn-lg">Analyze!</button>
-                </form>
-
-                <!-- Button trigger modal -->
-                <button type="button" id= "modalLauncher" style="display: none;" class="btn btn-primary" data-toggle="modal"
-                    data-target="#exampleModalCenter">
-                    Launch demo modal
-                </button>
-
-                <!-- Modal -->
-                <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <p class="lead">Results</p>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <button type="button" class="btn-lg btn-info">
-                                    Genuine <span id="genuine" class="badge badge-light">True</span>
-                                </button>
-                                <p></p>
-                                <button type="button" class="btn-lg btn-secondary">
-                                    Accuracy <span id="accuracy" class="badge badge-light">4</span>
-                                </button>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+<body class="card container" style="padding-top: 20pt;">
+    <h2>Sign Up</h2>
+    <br>
+    <div class="col-sm-10 form-group-lg">
+        <form action="javascript:;" onsubmit="register(this)">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username" required>
             </div>
-
-        </div>
-
+            <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="emailAddress" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required>
+            </div>
+            <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter Address" required>
+                </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="button" class="btn btn-info" onclick="location.href = 'login.html';" id="myButton">Log In</button>
+        </form>
+        <br>
     </div>
 </body>
 
